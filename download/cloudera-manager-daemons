@@ -1,0 +1,4 @@
+FROM busybox
+RUN mkdir -p /downloads
+WORKDIR /downloads
+RUN wget -c https://archive.cloudera.com/cm6/6.0.1/redhat7/yum/RPMS/x86_64/cloudera-manager-daemons-6.0.1-610811.el7.x86_64.rpm 
