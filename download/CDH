@@ -1,0 +1,5 @@
+FROM busybox
+RUN mkdir -p /downloads
+WORKDIR /downloads
+RUN wget -c https://archive.cloudera.com/cdh6/6.0.1/parcels/CDH-6.0.1-1.cdh6.0.1.p0.590678-el7.parcel
+CMD ["/bin/sh","-c","while true; do echo hello world;sleep 1;done"]

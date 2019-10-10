@@ -1,0 +1,9 @@
+FROM busybox
+RUN mkdir -p /downloads
+WORKDIR /downloads
+RUN touch 1234
+CMD ["/bin/sh","-c","while true; do echo hello world;sleep 1;done"]
+
+
+
+
