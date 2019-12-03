@@ -1,0 +1,5 @@
+FROM busybox
+RUN mkdir -p /downloads
+WORKDIR /downloads
+RUN wget -c https://archives.streamsets.com/datacollector/3.11.0/tarball/streamsets-datacollector-core-3.11.0.tgz
+CMD ["/bin/sh","-c","while true; do echo hello world;sleep 1;done"]
