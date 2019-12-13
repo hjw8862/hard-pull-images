@@ -1,0 +1,1 @@
+FROM bitnami/airflow:1.10.6
