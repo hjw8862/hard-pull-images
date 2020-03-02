@@ -1,0 +1,5 @@
+FROM busybox
+RUN mkdir -p /downloads
+WORKDIR /downloads
+RUN wget -c https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.232/presto-cli-0.232-executable.jar
+CMD ["/bin/sh","-c","while true; do echo hello world;sleep 1;done"]
