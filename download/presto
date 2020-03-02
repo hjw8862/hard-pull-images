@@ -1,0 +1,5 @@
+FROM busybox
+RUN mkdir -p /downloads
+WORKDIR /downloads
+RUN wget -c https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.232/presto-server-0.232.tar.gz
+CMD ["/bin/sh","-c","while true; do echo hello world;sleep 1;done"]
