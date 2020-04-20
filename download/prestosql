@@ -2,4 +2,5 @@ FROM busybox
 RUN mkdir -p /downloads
 WORKDIR /downloads
 RUN wget -c https://repo1.maven.org/maven2/io/prestosql/presto-server/332/presto-server-332.tar.gz
+RUN wget -c https://repo1.maven.org/maven2/io/prestosql/presto-cli/332/presto-cli-332-executable.jar
 CMD ["/bin/sh","-c","while true; do echo hello world;sleep 1;done"]

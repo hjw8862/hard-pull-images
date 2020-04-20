@@ -1,0 +1,5 @@
+FROM busybox
+RUN mkdir -p /downloads
+WORKDIR /downloads
+RUN wget -c https://archive.apache.org/dist/flink/flink-1.7.2/flink-1.7.2-bin-hadoop28-scala_2.11.tgz
+CMD ["/bin/sh","-c","while true; do echo hello world;sleep 1;done"]
