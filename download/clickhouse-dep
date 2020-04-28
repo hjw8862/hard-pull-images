@@ -1,0 +1,6 @@
+FROM busybox
+RUN mkdir -p /downloads
+WORKDIR /downloads
+RUN wget -c http://repo.yandex.ru/clickhouse/deb/stable/main/clickhouse-common-static_20.3.8.53_amd64.deb
+RUN wget -c http://repo.yandex.ru/clickhouse/deb/stable/main/clickhouse-client_20.3.8.53_all.deb
+CMD ["/bin/sh","-c","while true; do echo hello world;sleep 1;done"]
